@@ -1,0 +1,40 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+
+:root {
+  color-scheme: light dark;
+}
+
+.page {
+  display: flex;
+  flex-direction: column;
+  gap: token('spacing.xl');
+  padding: token('spacing.xl');
+  max-width: 960px;
+}
+
+.page-intro {
+  display: flex;
+  flex-direction: column;
+  gap: token('spacing.sm');
+}
+
+.card-grid {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: token('spacing.lg');
+}
+
+@media (min-width: 800px) {
+  .card-grid {
+    grid-template-columns: 1fr 1fr;
+  }
+}
+
+.weather-stats {
+  display: flex;
+  flex-direction: column;
+  gap: token('spacing.sm');
+}

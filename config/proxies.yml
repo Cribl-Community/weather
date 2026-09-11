@@ -1,0 +1,8 @@
+# External API declaration. Declare domains your app needs to reach.
+# At install time, admins see exactly which endpoints the app will use.
+
+api.open-meteo.com:
+  timeout: 15000
+  paths:
+    allowlist:
+      - /v1/forecast

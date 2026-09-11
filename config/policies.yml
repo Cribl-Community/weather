@@ -1,0 +1,7 @@
+# Product API access declaration. Declare Cribl product API paths your app needs to access.
+# At install time, admins see exactly which platform resources the app requires. These grants
+# apply app-wide, to both the frontend and every backend endpoint.
+#
+# App-scoped KV store and proxy paths are granted automatically — do not redeclare them here.
+
+policies: []

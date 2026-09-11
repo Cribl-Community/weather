@@ -1,0 +1,18 @@
+# Backend endpoint declaration. Each endpoint is an HTTP handler that runs on the Cribl platform.
+#
+# Write endpoints as modern ESM (npm dependencies + relative imports welcome). `apps build`
+# (run by `npm run build`) bundles each one into a single deployable file — the platform does
+# NOT resolve npm packages or relative files at deploy time, so the bundle must be self-contained.
+#
+# Endpoint permissions are NOT declared here. Cribl API access lives in `config/policies.yml`
+# and external egress in `config/proxies.yml`; both apply app-wide across every endpoint.
+
+runtime: js
+
+endpoints:
+  - name: welcome
+    script: backend/welcome.ts
+    description: Returns the Welcome to cribl Apps greeting
+  - name: weather
+    script: backend/weather.ts
+    description: Fetches San Francisco weather from Open-Meteo
